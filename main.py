@@ -2,6 +2,8 @@ import sqlite3
 from flask import Flask, render_template, request, redirect, url_for, flash
 from functions import cria_tabela, login, cadastrar
 
+logado = False
+
 cria_tabela()
 
 calendario = Flask(__name__)
@@ -36,7 +38,9 @@ def logando():
     if request.method == "POST":
         dre = request.form["dre"]
         senha = request.form["senha"]
-        return login(dre,senha)
+        rota, logado = login(dre,senha)
+        print(logado)
+        return rota
         
 @calendario.route("/home")
 def rota_home():

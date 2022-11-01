@@ -1,7 +1,7 @@
 import sqlite3
 from flask import Flask, redirect, render_template, request, flash
 
-existe = bool
+
 
 #cria tabela caso nao exista
 def cria_tabela() :
@@ -88,16 +88,18 @@ def login(dre,senha):
     db = sqlite3.connect('database.sqlite')
     cursor = db.cursor()
     if autentica_tudo(dre, senha) == True :
-        return redirect("/home")
+        global logado
+        logado = True
+        return redirect("/home"), logado
     elif autentica_dre(dre) == True and autentica_senha(senha) == False:
         flash("Senha errada!")
-        return redirect("/login")
+        return redirect("/login"), None
     elif autentica_dre(dre) == False and autentica_senha(senha) == True:
         flash("DRE errado")
-        return redirect("/login")
+        return redirect("/login"), None
     else:
         flash("DRE não cadastrado, por favor cadastre-se!")
-        return redirect("/login")
+        return redirect("/login"), None
 
 
 global user 
