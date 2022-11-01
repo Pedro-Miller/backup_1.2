@@ -1,0 +1,103 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario da UFRJ</title>
+</head>
+
+<body>
+{% with messages = get_flashed_messages() %}  
+    {% if messages %}  
+          {% for message in messages %}  
+               <p class="erro_dre_NAO_cadastrado">{{ message }}</p>
+               
+          {% endfor %}  
+    {% endif %}  
+ {% endwith %}
+<h1><em>Calendario do CT</em></h1>
+
+<table cellspacing="21" cellpadding="21">
+<caption align="top">
+    Novembro
+</caption>
+<thead>
+    <th>Dom</th>
+    <th>Seg</th>
+    <th>Ter</th>
+    <th>Qua</th>
+    <th>Qui</th>
+    <th>Sex</th>
+    <th>Sab</th>
+</thead>
+
+<tbody>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+    </tr>
+
+    <tr>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+    </tr>
+
+    <tr>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+        <td>16</td>
+        <td>17</td>
+        <td>18</td>
+        <td>19</td>
+    </tr>
+
+    <tr>
+        <td>20</td>
+        <td>21</td>
+        <td>22</td>
+        <td>23</td>
+        <td>24</td>
+        <td>25</td>
+        <td>26</td>
+    </tr>
+
+    <tr>
+        <td>27</td>
+        <td>28</td>
+        <td>29</td>
+        <td>30</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+<!--
+
+<picture>
+<source media="(max-width: 450px)" srcset="assets/ct_400.jpg" type="image/jpg">
+<source media="(max-width: 1050px)" srcset="assets/ct_700.jpg" type="image/jpg">
+<img src="assets/ct_1000.jpg" alt="Imagem grande">
+</picture>
+
+-->
+
+
+<p>Clicando aqui voce vai para o <a href="https://acessograduacao.ufrj.br/" target="_blank" rel="external">site da UFRJ</a></p>
+</body>
+
+<p>Clicando aqui voce vai para a <a href="pag02.html">seguda pagina</a></p>
+</body>
+
+

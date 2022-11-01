@@ -1,0 +1,20 @@
+
+<head>
+<title>Sucesso</title>
+</head>
+
+<body>
+{% with messages = get_flashed_messages() %}  
+    {% if messages %}  
+          {% for message in messages %}  
+               <p class="erro_dre_NAO_cadastrado">{{ message }}</p>
+               
+          {% endfor %}  
+    {% endif %}  
+ {% endwith %}
+<h1>Voce esta cadastrado!</h1>
+
+</body>
+
+
+

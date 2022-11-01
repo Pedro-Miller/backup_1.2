@@ -1,0 +1,29 @@
+
+
+
+<head>
+<title>Login</title>
+</head>
+
+<body>
+    {% with messages = get_flashed_messages() %}  
+    {% if messages %}  
+          {% for message in messages %}  
+               <p class="erro_dre_NAO_cadastrado">{{ message }}</p>
+               
+          {% endfor %}  
+    {% endif %}  
+ {% endwith %}
+<h1>Faça seu login</h1>
+
+<form action="/login" method="post">
+
+DRE: <input type="text" name = "dre" ><br>
+Senha:<input type="password" name = "senha"><br>
+<input type="submit">
+
+</form>
+</body>
+
+
+

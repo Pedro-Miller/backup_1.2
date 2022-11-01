@@ -1,0 +1,28 @@
+<head>
+<title>Cadastro</title>
+</head>
+
+<body>
+
+{% with messages = get_flashed_messages() %}  
+    {% if messages %}  
+          {% for message in messages %}  
+               <p>{{ message }}</p>
+               
+          {% endfor %}  
+    {% endif %}  
+ {% endwith %}
+
+<h1>Faça seu cadastro</h1>
+
+<form action="/cadastro" method="post">
+
+Nome: <input type="text" name = "nome" ><br>
+DRE: <input type="text" name = "dre" ><br>
+Senha:<input type="password" name = "senha"><br>
+<input type="submit">
+
+</form>
+</body>
+
+</html>
