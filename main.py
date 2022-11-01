@@ -10,9 +10,6 @@ logado = False
 
 
 
-
-
-
 @calendario.route("/")
 def rota_root():
     return render_template("base.html")
